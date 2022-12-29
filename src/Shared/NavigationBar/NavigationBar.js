@@ -23,7 +23,7 @@ const NavigationBar = () => {
                 <Navbar.Toggle />
 
                 <Navbar.Collapse>
-                    <Navbar.Link active={true} >
+                    <Navbar.Link>
 
                         <Link to='/'>Home</Link>
                     </Navbar.Link>
