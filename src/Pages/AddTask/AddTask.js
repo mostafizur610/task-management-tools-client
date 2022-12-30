@@ -1,5 +1,6 @@
 import { Button, Label, Textarea, TextInput } from 'flowbite-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AddTask = () => {
     return (
@@ -10,26 +11,52 @@ const AddTask = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="email1"
-                            value="Your email"
+                            value="Your Task"
                         />
                     </div>
                     <TextInput
                         id="email1"
-                        type="email"
-                        placeholder="name@flowbite.com"
+                        type="text"
+                        placeholder="task name"
                         required={true}
                     />
                 </div>
                 <div>
                     <div className="mb-2 block">
                         <Label
-                            htmlFor="password1"
-                            value="Your password"
+                            htmlFor="photoURL"
+                            value="Photo URL"
                         />
                     </div>
                     <TextInput
-                        id="password1"
-                        type="password"
+                        id="photoURL"
+                        type="text"
+                        required={true}
+                    />
+                </div>
+                <div>
+                    <div className="mb-2 block">
+                        <Label
+                            htmlFor="date1"
+                            value="Working Date"
+                        />
+                    </div>
+                    <TextInput
+                        id="date1"
+                        type="text"
+                        required={true}
+                    />
+                </div>
+                <div>
+                    <div className="mb-2 block">
+                        <Label
+                            htmlFor="hour1"
+                            value="Working Hour"
+                        />
+                    </div>
+                    <TextInput
+                        id="hour1"
+                        type="text"
                         required={true}
                     />
                 </div>
@@ -48,10 +75,9 @@ const AddTask = () => {
                         rows={4}
                     />
                 </div>
-
-                <Button type="submit">
+                <Link to='/myTask'>  <Button type="submit">
                     Add This Task
-                </Button>
+                </Button></Link>
             </form>
         </div>
     );
